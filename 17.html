@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17</title>
+</head>
+<body>
+    <script>
+        // membuat algoritma bubble sort
+        function bubblesort(a,N) {
+            var i = j = v = 0;
+            for (i=1; i<N; i++){
+                v = a[i];
+                j = i;
+                while (j>0 && a[j-1]>v){
+                    a[j]=a[j-1];
+                    j--;
+                };
+                a[j]=v;
+            }
+            for(i=0; i<a.length; i++){
+
+            };
+        };
+
+        var x = [1,3,4,1,201,100,4,7,42,85,12,583,13,104,31,76,49];
+        document.write("<div><p> input before bubble sort : "+x+" </p>");
+        bubblesort(x,17);
+        document.write("<p> input after bubble sort : "+x+" </p></div>");    
+    </script>
+</body>
+</html>

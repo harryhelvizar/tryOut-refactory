@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14</title>
+</head>
+<body>
+    <script>
+        var people = [
+            {id: 1, name: "udin", age: 12},
+            {id: 1, name: "wati", age: 51},
+            {id: 1, name: "budi", age: 34},
+            {id: 1, name: "agus", age: 16},
+            {id: 1, name: "sari", age: 19},
+            {id: 1, name: "ririn", age: 21},
+        ];
+
+        var saring = people.map(function(list){
+            if (list['age'] < 21){
+                document.write("id: " + list['id'] + ", name: " + list['name'] + ", age: " + list['age'] + "<br>")
+            }
+        }); 
+
+    </script>
+</body>
+</html>

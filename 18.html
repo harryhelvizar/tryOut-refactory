@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18</title>
+</head>
+<body>
+    <button onclick="removeDups()">
+        clik button
+    </button>
+    <h2>
+        output : <span style="color: red;" id="output"></span>
+    </h2>
+    <script>
+    function removeDups() {
+        var kota = ["Jakarta", "aceh", "malang", "medan", "bontang", "jogja", "jakarta",
+         "bandung", "malang", "solo", "palembang", "bandung"];
+            var unique = {};
+            kota.forEach(function(i){
+                if(!unique[i]){
+                    unique[i] = true;
+                }
+            });
+
+
+            document.getElementById("output").innerHTML = Object.keys(unique); 
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19</title>
+</head>
+
+<p id="output"></p>
+<body>
+    <script>
+        var input = prompt("masukkan angka", "");
+        var angka = Number(input);
+        var output = "";
+
+        const balik = x =>{
+            if(x === 1){
+                return output += "1";
+            }else{
+                output += x+", ";
+                balik(x-1);
+            }
+        }
+        balik(angka);
+        
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

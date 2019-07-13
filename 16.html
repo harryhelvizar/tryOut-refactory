@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>16</title>
+</head>
+<body>
+    <!-- membuat form inputan -->
+
+    <form id="inputan" method="POST">
+        <input type="text" id="inputField">
+        <input type="submit" value="input">
+    </form>
+
+    <!-- membuat output untuk melihat hasil dari inputan -->
+    <h2>
+        input  : <span id="input"></span>
+    </h2>
+    <h2>
+        output : <span id="output"></span>
+    </h2>
+
+    <!-- membuat script javascript -->
+    <script>
+        function palindrome(event){
+            event.preventDefault();
+            var str = document.getElementById("inputField").value;
+            document.getElementById("input").innerHTML = str;
+            var re = /[\W_]/g;
+            var lowRegStr = str.toLowerCase().replace(re, '');
+            var reverseStr = lowRegStr.split('').reverse().join('');
+            if(reverseStr === lowRegStr){
+                document.getElementById("output").innerHTML = "palindrome";
+            }else{
+                document.getElementById("output").innerHTML = "bukan palindrome";
+            }
+        }
+        var form = document.getElementById("inputan");
+
+        form.addEventListener("submit", palindrome, true);
+    </script>
+</body>
+</html>
